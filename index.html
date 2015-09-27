@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5存取复杂数据JSON对象数据 Demo</title>
+<script type="text/javascript" src="js/objectStorage.js"></script>
+</head>
+
+<body>
+<h3>使用HTML5存储复杂数据到json对象</h3>
+<table width="600" border="1" cellspacing="1" cellpadding="1">
+  <caption>
+    每日战报-输入（填写一组相关信息到表格中）
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="col">赛制</th>
+      <th scope="col">选手1</th>
+      <th scope="col">选手2</th>
+      <th scope="col">选手1 得分</th>
+      <th scope="col">选手1 得分</th>
+      <th scope="col">比赛结果</th>
+    </tr>
+    <tr>
+      <td>BO5</td>
+      <td>大莹</td>
+      <td>小姜</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2 : 3</td>
+    </tr>
+    <tr>
+      <td>BO5</td>
+      <td><input type="text" id="player1"></td>
+      <td><input type="text" id="player2"></td>
+      <td><input type="text" id="player1_ptns"></td>
+      <td><input type="text" id="player2_ptns"></td>
+      <td><input type="button" value="保存" onclick="saveStorage();"></td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h4> 这里将会获取已经存入localStorage的json对象，并且解析成原始信息并且展示</h4>
+<p>
+<input type="text" id="find">
+<input type="button" value="检索" onclick="findStorage('msg');">
+</p>
+<!-- 下面这块用于显示被检索到的信息文本 -->
+<p id ="msg"></p>
+
+</body>
+</html>
